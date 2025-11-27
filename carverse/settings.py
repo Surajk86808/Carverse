@@ -76,7 +76,11 @@ WSGI_APPLICATION = "carverse.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": "carverse_db",
+        "USER": "postgres",
+        "PASSWORD": "6299",
+        "HOST": "localhost",
+        "PORT": "5000",
     }
 }
 
@@ -125,3 +129,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+#media files settings
+MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = "/media/"
