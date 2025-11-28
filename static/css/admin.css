@@ -1,0 +1,252 @@
+/* =====================================================================
+   CARVERSE – PREMIUM DJANGO ADMIN THEME
+   Clean, Glassmorphism, Gradient Header, Modern UI
+   ===================================================================== */
+
+/* ---------- GLOBAL ---------- */
+
+:root {
+    --primary: #0d1b2a;
+    --primary-light: #1b263b;
+    --secondary: #415a77;
+    --accent: #ffb703;
+    --white: #ffffff;
+    --text-dark: #0d1b2a;
+    --text-light: #e0e1dd;
+    --bg-light: #f7f9fc;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --blur: 12px;
+}
+
+body {
+    background: var(--bg-light) !important;
+    font-family: "Poppins", "Segoe UI", sans-serif !important;
+    color: var(--text-dark);
+}
+
+/* ---------- HEADER / BRANDING ---------- */
+
+#header {
+    background: linear-gradient(90deg, #1b263b, #0d1b2a);
+    padding: 18px 20px;
+    border-bottom: 4px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#branding h1 {
+    color: var(--accent) !important;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+#branding img {
+    height: 45px;
+    margin: 0 15px;
+}
+
+#branding span {
+    color: var(--white);
+    font-size: 20px;
+}
+
+/* Top-right menu */
+
+#user-tools {
+    color: var(--accent) !important;
+    font-weight: 500;
+}
+
+#user-tools a {
+    color: var(--white) !important;
+}
+
+#user-tools a:hover {
+    color: var(--accent) !important;
+}
+
+/* ---------- RIGHT SIDEBAR (RECENT ACTIONS) ---------- */
+
+#content-related {
+    background: var(--card-bg);
+    
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+#content-related h2 {
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* ---------- MODULE LIST (Groups, Cars, Teams etc.) ---------- */
+
+.module {
+    background: var(--card-bg);
+    
+    padding: 10px 0;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.module h2 {
+    background: var(--primary);
+    color: var(--white);
+    padding: 14px 20px;
+    margin: 0;
+    border-radius: 12px 12px 0 0;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+}
+
+/* Module links */
+
+.module a {
+    font-size: 15px;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.object-tools a.addlink,
+.module .addlink {
+    color: var(--success);
+    font-weight: 600;
+}
+
+.object-tools a.changelink {
+    color: var(--secondary);
+}
+
+/* Hover Effect */
+.module a:hover {
+    color: var(--accent) !important;
+}
+
+/* ---------- TABLES ---------- */
+
+.change-list table {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.change-list table thead th {
+    background: var(--primary);
+    color: var(--white);
+    padding: 14px;
+    font-size: 14px;
+}
+
+.change-list table tbody tr {
+    transition: 0.2s;
+}
+
+.change-list table tbody tr:hover {
+    background: #e8eef5;
+}
+
+/* ---------- FORMS ---------- */
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    border-radius: 8px !important;
+    border: 1px solid #ccc !important;
+    padding: 10px !important;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 5px rgba(255, 183, 3, 0.6);
+}
+
+.form-row label {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* ---------- BUTTONS ---------- */
+
+.submit-row input[type=submit] {
+    background: var(--primary) !important;
+    color: var(--white) !important;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.submit-row input[type=submit]:hover {
+    background: var(--accent) !important;
+    color: var(--primary) !important;
+    transform: translateY(-2px);
+}
+
+/* Delete button */
+.deletelink {
+    background: #d90429 !important;
+    color: white !important;
+    padding: 10px 16px !important;
+    border-radius: 8px;
+}
+
+.deletelink:hover {
+    background: #a2001f !important;
+}
+
+/* ---------- PAGINATION ---------- */
+
+.paginator .this-page {
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 6px;
+}
+
+.paginator a:hover {
+    background: var(--accent);
+    color: var(--primary) !important;
+}
+
+/* ---------- FOOTER ---------- */
+
+#footer {
+    text-align: center;
+    color: var(--secondary);
+    margin-top: 40px;
+    padding: 10px;
+}
+
+#footer:hover {
+    color: var(--primary);
+}
+
+
+/* ---------- ANIMATIONS ---------- */
+
+.module,
+#content-related,
+.change-list table {
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
