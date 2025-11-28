@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+{% block title %} | Logout {% endblock}
+
+<!-- Sub banner start -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>Logout</h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'login' %}">Home</a></li>
+                <li class="active">Logout</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div><!--Sub banner end -->
+
+<!-- Logout start -->
+<div class="logout content-area-7">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-8 offset-md-2 text-center">
+                <i class="fa fa-check-circle"></i>
+                <p>You have been logged out successfully.</p>
+                <a href="{% url 'login' %}" class="btn btn-primary">Login Again</a>
+            </div>
+        </div>
+</div><!-- Logout end -->
+
+{% endblock %}

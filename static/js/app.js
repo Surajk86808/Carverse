@@ -479,3 +479,7 @@ $(function () {
         }
     }).trigger("resize");
 })(jQuery);
+
+settimeout(function(){
+    $('#message').fadeOut('slow');
+},3000);

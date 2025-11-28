@@ -41,6 +41,15 @@ INSTALLED_APPS = [
     "cars.apps.CarsConfig",
     "ckeditor",
     'django.contrib.humanize',
+    "accounts.apps.AccountsConfig",
+    "django.contrib.sites",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    
+    # Providers
+    "allauth.socialaccount.providers.google",
+    "allauth.socialaccount.providers.facebook",
 ]
 
 MIDDLEWARE = [
@@ -49,6 +58,7 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
@@ -136,3 +146,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 #media files settings
 MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
+
+#messages 
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
+
+SITE_ID = 1
